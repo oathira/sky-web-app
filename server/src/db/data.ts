@@ -11,7 +11,7 @@ image: "http://localhost:4000/public/hrobanner.jpeg",
     { text: "See all deals", variant: "outline" },
   ],
 };
-
+//npm run seed
 export const productCards = [
   { 
     title:"Sky Sports",

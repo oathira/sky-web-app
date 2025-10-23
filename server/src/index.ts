@@ -30,9 +30,7 @@ async function startServer() {
   app.use(express.json());
   app.use('/public', express.static(path.join(__dirname, '../public')));
 
-  app.use('/graphql', expressMiddleware(server, {
-    context: async ({ req }) => ({ token: req.headers.authorization })
-  }));
+  app.use('/graphql', expressMiddleware(server));
 
   app.listen(PORT, () => {
     console.log(`Server ready at http://localhost:${PORT}/graphql`);

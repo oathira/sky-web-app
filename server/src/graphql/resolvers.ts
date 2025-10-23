@@ -8,4 +8,13 @@ export const resolvers = {
     products: async () => await Product.find(),
     heroBanner: async () => await HeroBanner.findOne(),
   },
+//   addProducts: async (_: any, { products }: any) => {
+//   try {
+//     const inserted = await Product.insertMany(products);
+//     return inserted;
+//   } catch (error) {
+//     console.error("Error inserting products:", error);
+//     throw new Error("Failed to insert products");
+//   }
+// }
 };

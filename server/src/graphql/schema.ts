@@ -12,6 +12,11 @@ type Button {
   variant: String
 }
 
+input ButtonInput {
+  text: String
+  variant: String
+}
+
 type Product {
   id: ID!
   title: String
@@ -19,6 +24,14 @@ type Product {
   text: String
   img: String
   buttons: [Button]
+}
+
+input ProductInput {
+  title: String
+  subtitle: String
+  text: String
+  img: String
+  buttons: [ButtonInput]
 }
 
 type HeroBanner {
@@ -34,5 +47,9 @@ type Query {
   shows: [Show]
   products: [Product]
   heroBanner: HeroBanner
+}
+
+type Mutation {
+  addProducts(products: [ProductInput!]!): [Product]
 }
 `;
